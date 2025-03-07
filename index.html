@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charts</title>
+</head>
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+      <script>
+        const ctx = document.getElementById('myChart');
+
+        const pieColors = [
+            "#425C77",
+            "#5E6B89",
+            "#5672B6",
+            "#84CAFF",
+            "#D2E4FF",
+            "#7AADB6"
+        ]
+      
+        new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: ['Dark BLue', 'Grey Blue', 'Blue', 'Light Blue', 'Light Blue', 'Turquoise'],
+            datasets: [{
+              label: 'number',
+              data: [12, 19, 3, 5, 2, 3],
+              borderWidth: 1,
+              backgroundColor: pieColors,
+            }]
+          },
+          options: {
+            responsive: false,
+          }
+        },);
+      </script>
+</body>
+</html>
